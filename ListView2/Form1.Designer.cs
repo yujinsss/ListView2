@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.lvView = new System.Windows.Forms.ListView();
+            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chWork = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblName = new System.Windows.Forms.Label();
             this.lblAge = new System.Windows.Forms.Label();
             this.lblWork = new System.Windows.Forms.Label();
@@ -36,9 +39,6 @@
             this.txtAge = new System.Windows.Forms.TextBox();
             this.txtWork = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.chName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chAge = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.chWork = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lvView
@@ -55,6 +55,22 @@
             this.lvView.TabIndex = 0;
             this.lvView.UseCompatibleStateImageBehavior = false;
             this.lvView.View = System.Windows.Forms.View.Details;
+            this.lvView.Click += new System.EventHandler(this.LvView_Click);
+            // 
+            // chName
+            // 
+            this.chName.Text = "이름";
+            this.chName.Width = 100;
+            // 
+            // chAge
+            // 
+            this.chAge.Text = "나이";
+            this.chAge.Width = 100;
+            // 
+            // chWork
+            // 
+            this.chWork.Text = "직업";
+            this.chWork.Width = 150;
             // 
             // lblName
             // 
@@ -112,22 +128,7 @@
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "추가";
             this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // chName
-            // 
-            this.chName.Text = "이름";
-            this.chName.Width = 100;
-            // 
-            // chAge
-            // 
-            this.chAge.Text = "나이";
-            this.chAge.Width = 100;
-            // 
-            // chWork
-            // 
-            this.chWork.Text = "직업";
-            this.chWork.Width = 150;
+            this.btnAdd.Click += new System.EventHandler(this.BtnAdd_Click);
             // 
             // Form1
             // 
